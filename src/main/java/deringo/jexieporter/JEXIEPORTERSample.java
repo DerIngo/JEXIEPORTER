@@ -124,8 +124,8 @@ public class JEXIEPORTERSample {
             // make Jackson use JAXB annotations
             JakartaXmlBindAnnotationModule module = new JakartaXmlBindAnnotationModule();
             mapper.registerModule(module);
-            // Converting the Object to JSONString
-            String jsonString = mapper.writeValueAsString(sampleData);
+            // Converting the Object to JSONString (pretty print)
+            String jsonString = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(sampleData);
             return jsonString;
         } catch (Exception e) {
             return String.format("{\"error\":\"%s\"}", e.toString());
