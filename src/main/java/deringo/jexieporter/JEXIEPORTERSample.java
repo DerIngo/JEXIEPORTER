@@ -22,6 +22,7 @@ import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import com.fasterxml.jackson.module.jakarta.xmlbind.JakartaXmlBindAnnotationModule;
 import com.opencsv.CSVParser;
 import com.opencsv.CSVParserBuilder;
@@ -124,6 +125,8 @@ public class JEXIEPORTERSample {
             // make Jackson use JAXB annotations
             JakartaXmlBindAnnotationModule module = new JakartaXmlBindAnnotationModule();
             mapper.registerModule(module);
+            // https://mkyong.com/java/jackson-java-8-date-time-type-java-time-localdate-not-supported-by-default/
+            mapper.registerModule(new JavaTimeModule());
             // Converting the Object to JSONString (pretty print)
             String jsonString = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(sampleData);
             return jsonString;
