@@ -1,10 +1,6 @@
 # JEXIEPORTER
 JSON Excel XML Importer Exporter
-little sample app to test JSON/Excel/XML Im- and Export
-
-## Excel
-Well, Excel means CSV.<br>
-And Comma Separated Values are separated by Semicolon.
+little sample app to test JSON/Excel/CSV/XML Im- and Export
 
 # How to run
 Just execute JEXIEPORTERSample to run the sample functions.
@@ -16,7 +12,9 @@ The Sample App steps:
 * convert data to json
 * convert xml to objects
 * convert json to objects
-* export data to a temporary file and opens system csv-viewer
+* export data as CSV to a temporary file and opens system csv-viewer
+* export data as xls to a temporary file and opens system xls-viewer
+* import temporary xlx file
 
 # Notes
 * Delimiter: ";"
