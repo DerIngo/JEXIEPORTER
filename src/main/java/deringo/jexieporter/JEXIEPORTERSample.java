@@ -44,29 +44,29 @@ public class JEXIEPORTERSample {
         
         // Import CSV data
         List<SampleData> list = importCSV();
-//        list.forEach(data -> System.out.println(data));
+        list.forEach(data -> System.out.println(data));
         
         System.out.println("###################################");
         // convert data to XML
-//        list.forEach(data -> System.out.println(toXML(data)));
+        list.forEach(data -> System.out.println(toXML(data)));
         
         System.out.println("###################################");
         // convert data to JSON
-//        list.forEach(data -> System.out.println(toJSON(data)));
+        list.forEach(data -> System.out.println(toJSON(data)));
         
         System.out.println("###################################");
         // convert data to XML and back to data
-//        list.forEach(data -> System.out.println(xmlToSampleData( toXML(data) )));
+        list.forEach(data -> System.out.println(xmlToSampleData( toXML(data) )));
      
         System.out.println("###################################");
         // convert data to JSON and back to data
-//        list.forEach(data -> System.out.println(jsonToSampleData( toJSON(data) )));
+        list.forEach(data -> System.out.println(jsonToSampleData( toJSON(data) )));
 
         System.out.println("###################################");
         // export data to CSV
-//        exportCSV(list);
+        exportCSV(list);
         // open new CSV file
-//        Desktop.getDesktop().open(EXPORT_CSV.toFile());
+        Desktop.getDesktop().open(EXPORT_CSV.toFile());
         
         System.out.println("###################################");
         // export data to xlsx
